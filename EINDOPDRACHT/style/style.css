@@ -3,15 +3,33 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: "HelveticaNeue-Bold";
 	}
 
 	body {
 		background-color: #FFFFFF;
+		font-family: "HelveticaNeue-Bold";
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	/* opmaak afbeeldingen main */
+	main img {
+		width: 90%;
+		margin: 0 1em 1em 1em;
+	}
+
+	/*** opmaak header ***/
+
+	/* opmaak afbeeldingen header*/
+	header img {
+		width: 5rem;
+		margin: auto;
 	}
 
 	/* hamburger menu */
-	div {
+	header div {
 		width: 2rem;
 		height: 1.5rem;
 		position: relative;
@@ -68,9 +86,9 @@
 		transform: rotate(-45deg);
 	}
 
-	/***** end of hamburger styles *****/
+	/***** eind hamburger opmaak *****/
 
-	/***** start of menu styles *****/
+	/***** start menu opmaak *****/
 
 	/* 
   Here we define our base nav styles, notice we pass a translateX of minus 100% allowing us to position
@@ -87,7 +105,7 @@
 		z-index: 2;
 	}
 
-	/* When nav gets a second class, namely; 'active', we translate the nav element back into our viewport! */
+	/* Wanneer nav een tweede class krijgt, genaamd; 'active', zetten we het nav element terug in de viewport */
 	nav.active {
 		transform: translateX(0);
 	}
@@ -98,11 +116,10 @@
 
 	a {
 		text-decoration: none;
-		font-family: "HelveticaNeue-Bold";
 		color: #383838;
 		font-size: 1.4rem;
-		letter-spacing: 0.1rem;
-		line-height: 3.5rem;
+		letter-spacing: 0.1em;
+		line-height: 3.5em;
 	}
 
 	a:active {
@@ -129,32 +146,18 @@
 	}
 
 	.slider a {
-		font-family: "HelveticaNeue-Bold";
 		font-size: 14px;
 		color: #969696;
 		text-decoration: none;
 	}
 
-	/* opmaak img */
-	header img {
-		width: 5rem;
-		margin: auto;
-	}
 
-	figure img {
-		width: 90%;
-		margin: 0 1em 1em 1em;
-	}
 
-	/* footer algemeen */
+	/*** footer ***/
 	footer {
 		padding: 5rem 2rem;
 		background-color: black;
 		color: #FFFFFF;
-	}
-
-	footer h3 {
-		font-size: 24px;
 	}
 
 	article a {
@@ -163,26 +166,43 @@
 		color: #E5E5E5;
 	}
 
-	section {
+	div {
 		display: flex;
+	}
+
+	img + p {
+		visibility: hidden;
+	}
+
+	p + a {
+		visibility: hidden;
 	}
 
 	/* formulier footer */
 	input:not([type=submit]) {
-		width: 95%;
+		width: 80%;
 		padding: 1px 1px 10px;
 		margin-top: 2em;
 		background-color: black;
 		border-style: solid;
 		border-width: 0px 0px 1px 0px;
 		border-color: #383838;
+	}
 
+	input:not([type=email]) {
+		background-color: #000000;
+		color: lightgray;
+		padding: 0.5em;
+		margin-top: 1em;
+		border: solid 0.5px #383838;
+		border-radius: 1em;
+		text-transform: uppercase;
 	}
 
 	/* images footer */
-	section img {
+	div img {
 		width: 1.2em;
-		margin: 3em 1em 0 0 
+		margin: 3em 1em 0 0
 	}
 
 	.pattalogowhite {
@@ -192,3 +212,27 @@
 		display: flex;
 		justify-content: center;
 	}
+
+	@media screen and (min-width: 48em) {
+
+		/* footer desktop versie */
+		img + p {
+			visibility: visible;
+		}
+
+		p + a {
+			visibility: visible;
+		}
+
+		footer {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.linkerkolom {
+			width: 50%;
+		}
+
+		.rechterkolom {
+			width: 50%;
+		}
