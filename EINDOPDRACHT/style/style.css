@@ -1,238 +1,288 @@
-	*,
-	html {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+/* bronnen gebruikt: 	*/
 
-	body {
-		background-color: #FFFFFF;
-		font-family: "HelveticaNeue-Bold";
-	}
+*,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-	h3 {
-		font-size: 24px;
-	}
+body {
+	background-color: #FFFFFF;
+	font-family: "HelveticaNeue-Bold";
+}
 
-	/* opmaak afbeeldingen main */
-	main img {
-		width: 90%;
-		margin: 0 1em 1em 1em;
-	}
+/*** opmaak main ***/
+main {
+	font-family: "HelveticaNeue";
+}
 
-	/*** opmaak header ***/
+main article {
+	padding: 32px 24px;
+}
 
-	/* opmaak afbeeldingen header*/
-	header img {
-		width: 5rem;
-		margin: auto;
-	}
+main img {
+	width: 100%;
+	margin: 0 0 0 0;
+}
 
-	/* hamburger menu */
-	header div {
-		width: 2rem;
-		height: 1.5rem;
-		position: relative;
-		display: flex;
-		align-items: center;
-		margin: 1.5rem 0 0 1rem;
-	}
+figure img {
+	width: 90%;
+	margin: 0 1em 1em 1em;
+}
 
-	/* Dit worden de 3 lijnen, before wordt de eerste, 'span' de tweede and after de derde */
-	span {
-		height: .2rem;
-		width: 100%;
-		display: block;
-		background: #000000;
-	}
+h1 {
+	font-size: 40px;
+}
 
-	span::before,
-	span::after {
-		content: '';
-		height: .2rem;
-		width: 100%;
-		position: absolute;
-		background: #000000;
-		transition: 0.3s;
-	}
+h2 {
+	font-size: 20px;
+	margin: 0.5em 0em;
+}
 
-	span::before {
-		top: 0px;
-	}
+section p:last-of-type {
+	margin: 10px 0px;
+	font-size: 12px;
+	color: #969696;
+}
 
-	/* Positie ::after aan de onderkant van de div */
-	span::after {
-		bottom: 0px
-	}
+section > h2 {
+	font-size: 32px;
+	padding-bottom: 1em;
+	border-bottom: solid 4px;
+}
 
-	/* 
+button {
+	font-family: "HelveticaNeue-Bold"
+}
+
+button:last-of-type {
+	background: #000000;
+	color: #FFFFFF;
+	display: block;
+	font-size: 16px;
+	padding: 24px 48px;
+	width: 100%;
+	margin: auto;
+}
+
+/*** opmaak header ***/
+
+/* opmaak afbeeldingen header*/
+.topnav {
+	width: 5rem;
+	margin: auto;
+}
+
+.hamburgermenu {
+	display: flex;
+	align-items: stretch;
+}
+
+/* hamburger menu */
+.hamburger {
+	width: 2rem;
+	height: 1.5rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 1.5rem 0 0 1rem;
+}
+
+/* Dit worden de 3 lijnen, before wordt de eerste, 'span' de tweede and after de derde */
+span {
+	height: .2rem;
+	width: 100%;
+	display: block;
+	background: #000000;
+}
+
+span::before,
+span::after {
+	content: '';
+	height: .2rem;
+	width: 100%;
+	position: absolute;
+	background: #000000;
+	transition: 0.3s;
+}
+
+span::before {
+	top: 0px;
+}
+
+/* Positie ::after aan de onderkant van de div */
+span::after {
+	bottom: 0px
+}
+
+/* 
   Define styles which will be applied when the class 'active' is added to the div wrapper.
   We can actually pass multiple classes to HTML elements, this way we can style the element which hash
   both classes of 'hamburger' and 'active'
 */
-	.hamburger.active span {
-		background: rgba(0, 0, 0, 0);
-		transition: .5s;
-	}
+.hamburger.active span {
+	background: rgba(0, 0, 0, 0);
+	transition: .5s;
+}
 
-	/* We can then also pass specific styles which are only applicable when .hamburger.active exists */
-	.hamburger.active span::before {
-		transform: rotate(45deg);
-		top: 12px;
-	}
+/* We can then also pass specific styles which are only applicable when .hamburger.active exists */
+.hamburger.active span::before {
+	transform: rotate(45deg);
+	top: 12px;
+}
 
-	.hamburger.active span::after {
-		top: 12px;
-		transform: rotate(-45deg);
-	}
+.hamburger.active span::after {
+	top: 12px;
+	transform: rotate(-45deg);
+}
 
-	/***** eind hamburger opmaak *****/
+/*eind hamburger opmaak */
+/* start menu opmaak */
+.navigation {
+	transform: translateX(-100%);
+	background: #FFFFFF;
+	margin-top: 1rem;
+	border-left: white solid;
+	width: 100%;
+	transition: .3s ease-in-out;
+}
 
-	/***** start menu opmaak *****/
-
-	/* 
-  Here we define our base nav styles, notice we pass a translateX of minus 100% allowing us to position
-  the nav element out of our viewport. We do so instead of using for example; display: none; because this way
-  the content remains accessible for screen readers.
-*/
-	.navigation {
-		transform: translateX(-100%);
-		background: #FFFFFF;
-		margin-top: 1rem;
-		border-left: white solid;
-		width: 100%;
-		transition: .3s ease-in-out;
-		z-index: 2;
-	}
-
-	/* Wanneer nav een tweede class krijgt, genaamd; 'active', zetten we het nav element terug in de viewport */
-	nav.active {
-		transform: translateX(0);
-	}
-
-	ul {
-		list-style-type: none;
-	}
-
-	a {
-		text-decoration: none;
-		color: #383838;
-		font-size: 1.4rem;
-		letter-spacing: 0.1em;
-		line-height: 3.5em;
-	}
-
-	a:active {
-		color: grey;
-	}
-
-	/* slider menu */
-	.slider {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		overflow: auto;
-		white-space: nowrap;
-
-	}
-
-	.slider li {
-		display: list-item;
-		padding: 0 24px;
-		display: inline-block;
-		width: 40%;
-	}
-
-	.slider a {
-		font-size: 14px;
-		color: #969696;
-		text-decoration: none;
-	}
+/* Wanneer nav een tweede class krijgt, genaamd; 'active', zetten we het nav element terug in de viewport */
+nav.active {
+	transform: translateX(0);
+}
 
 
+ul {
+	list-style-type: none;
+}
 
-	/*** footer ***/
-	footer {
-		padding: 5rem 2rem;
-		background-color: black;
-		color: #FFFFFF;
-	}
+a {
+	text-decoration: none;
+	color: #383838;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	line-height: 3.5em;
+}
 
-	article a {
-		display: flex;
-		font-size: 16px;
-		color: #E5E5E5;
-	}
+a:active {
+	color: grey;
+}
 
-	div {
-		display: flex;
-	}
+/* slider menu */
+.slider {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+	white-space: nowrap;
 
+}
+
+.slider li {
+	display: list-item;
+	padding: 0 24px;
+	display: inline-block;
+	width: 40%;
+}
+
+.slider a {
+	font-size: 14px;
+	color: #969696;
+	text-decoration: none;
+}
+
+/*** footer ***/
+footer {
+	padding: 5rem 2rem;
+	background-color: black;
+	color: #FFFFFF;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+article a {
+	display: flex;
+	font-size: 16px;
+	color: #E5E5E5;
+}
+
+footer div {
+	display: flex;
+}
+
+img + p {
+	visibility: hidden;
+}
+
+p + a {
+	visibility: hidden;
+}
+
+/* formulier footer */
+input {
+	color: lightgray;
+}
+
+input:not([type=submit]) {
+	width: 80%;
+	padding: 1px 1px 10px;
+	margin-top: 2em;
+	background-color: black;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #383838;
+}
+
+input:not([type=email]) {
+	background-color: #000000;
+	color: lightgray;
+	padding: 0.5em;
+	margin-top: 1em;
+	border: solid 0.5px #383838;
+	border-radius: 1em;
+	text-transform: uppercase;
+}
+
+/* images footer */
+div img {
+	width: 1.2em;
+	margin: 3em 1em 0 0
+}
+
+h1 > img {
+	width: 3em;
+	margin: auto;
+	margin-bottom: 2em;
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (min-width: 48em) {
+
+	/* footer desktop versie */
 	img + p {
-		visibility: hidden;
+		visibility: visible;
 	}
 
 	p + a {
-		visibility: hidden;
+		visibility: visible;
 	}
 
-	/* formulier footer */
-	input:not([type=submit]) {
-		width: 80%;
-		padding: 1px 1px 10px;
-		margin-top: 2em;
-		background-color: black;
-		border-style: solid;
-		border-width: 0px 0px 1px 0px;
-		border-color: #383838;
-	}
-
-	input:not([type=email]) {
-		background-color: #000000;
-		color: lightgray;
-		padding: 0.5em;
-		margin-top: 1em;
-		border: solid 0.5px #383838;
-		border-radius: 1em;
-		text-transform: uppercase;
-	}
-
-	/* images footer */
-	div img {
-		width: 1.2em;
-		margin: 3em 1em 0 0
-	}
-
-	.pattalogowhite {
-		width: 7em;
-		margin: auto;
-		margin-bottom: 2em;
+	footer {
 		display: flex;
-		justify-content: center;
+		flex-direction: row;
 	}
 
-	@media screen and (min-width: 48em) {
+	.linkerkolom {
+		width: 50%;
+	}
 
-		/* footer desktop versie */
-		img + p {
-			visibility: visible;
-		}
-
-		p + a {
-			visibility: visible;
-		}
-
-		footer {
-			display: flex;
-			flex-direction: row;
-		}
-
-		.linkerkolom {
-			width: 50%;
-		}
-
-		.rechterkolom {
-			width: 50%;
-		}
+	.rechterkolom {
+		width: 50%;
+	}
