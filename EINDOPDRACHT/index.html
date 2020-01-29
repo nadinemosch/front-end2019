@@ -7,42 +7,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 	<title>Patta</title>
 </head>
 
-<!-- alles wat te zien is op de site -->
-
 <body>
 	<header>
-		<!-- hamburger menu -->
+		<!-- hamburger menu deel 1 -->
 		<div class="hamburger">
 			<span class="link"></span>
 		</div>
-		<div class="hamburgermenu">
-			<nav class="navigation">
-				<ul>
-					<li><a href="">LATEST</a></li>
-					<li><a href="">APPAREL</a></li>
-					<li><a href="">HEADWEAR</a></li>
-					<li><a href="">FOOTWEAR</a></li>
-					<li><a href="">COLLECTIONS</a></li>
-					<li><a href="">ACCESSORIES</a></li>
-					<li><a href="">BRANDS</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">MY ACCOUNT</a></li>
-					<li><a href="">INFO</a></li>
-					<li><a href="">NEWSLETTER</a></li>
-				</ul>
-			</nav>
-			<!-- logo -->
-			<a href="index.html"><img src="images/pattalogo.png" class="topnav" alt="patta logo black"></a>
-			<!-- shopping bag -->
-			<a href=""><img src="images/bag.png" class="topnav" alt="shopping bag"></a>
-		</div>
-		<!-- slider nav bar -->
-		<nav class="slider">
+		<!-- logo -->
+		<a href="index.html"><img src="images/pattalogo.png" class="topnav" alt="patta logo black"></a>
+		<!-- shopping bag -->
+		<a href=""><img src="images/bag.png" class="topnav" alt="shopping bag"></a>
+	</header>
+	<!-- hamburger menu deel 2 -->
+	<div class="hamburgermenu">
+		<nav class="navigation">
+			<ul>
+				<li><a href="">LATEST</a></li>
+				<li><a href="">APPAREL</a></li>
+				<li><a href="">HEADWEAR</a></li>
+				<li><a href="">FOOTWEAR</a></li>
+				<li><a href="">COLLECTIONS</a></li>
+				<li><a href="">ACCESSORIES</a></li>
+				<li><a href="">BRANDS</a></li>
+				<li><a href="">BLOG</a></li>
+				<li><a href="">MY ACCOUNT</a></li>
+				<li><a href="">INFO</a></li>
+				<li><a href="">NEWSLETTER</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- slider nav bar -->
+	<nav class="slider">
+		<ul>
 			<li><a href="#"> LATEST </a></li>
 			<li><a href="#"> APPAREL </a></li>
 			<li><a href="#"> FOOTWEAR </a></li>
@@ -50,35 +50,45 @@
 			<li><a href="#"> COLLECTIONS </a></li>
 			<li><a href="#"> ACCESSOIRES </a></li>
 			<li><a href="#"> BLOG </a></li>
-		</nav>
-	</header>
+		</ul>
+	</nav>
 	<main>
-		<!-- artikel over product -->
-		<article>
-			<h1>Patta Nylon Camp Hat (Black)</h1>
-			<img src="images/poccapfront.webp" alt="">
-			<img src="images/poccapside.jpg" alt="">
-			<img src="images/poccapback.jpg" alt="">
-			<img src="images/poccapcloseup.jpg" alt="">
-			<img src="images/poccapbackcloseup.jpg" alt="">
-			<section>
-				<h2>€40</h2>
-				<button type="button">
-					<h2>DETAILS</h2>
-				</button>
-				<p>This sleek new all-black POC camp hat is the latest addition to our range of headwear. The POC Nylon camp hat is made out of 100% Nylon with a rubber POC patch on the front of the cap. The cap has an adjustable strap so one size fits all, the cap is finished off with a Patta flag label on the back of the hat.</p>
-				<p>Made in China</p>
-				<p>POC-WI19-NYLON-CH-001</p>
-				<button type="button">
-					<h2>SIZE</h2>
-				</button>
-				<button type="button"> ADD TO BAG
-				</button>
-				<p>EU shipping from €5, International shipping from €10</p>
-			</section>
-		</article>
+		<!-- afbeeldingen die doorverwijzen naar detail pagina's -->
+		<section><a href="">
+				<figure><img src="images/101barz.png" alt="101barz"></figure>
+			</a>
+			<!-- DEZE AFBEELDING IS DE LINK NAAR DETAILPAGINA -->
+			<a href="detailpagina.html">
+				<figure><img src="images/cap.png" alt="black cap"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/crewneck.png" alt="black crewneck"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/jersey.png" alt="patta jersey"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/jordans.png" alt="jordan sneakers"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/raffle.png" alt="yeezy raffle"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/soundsystem.png" alt="patta soundsystem logo"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/tracksuit.png" alt="black tracksuit"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/tshirt1.png" alt="black t-shirt"></figure>
+			</a>
+			<a href="">
+				<figure><img src="images/tshirt2.png" alt="pink t-shirt"></figure>
+			</a>
+		</section>
 	</main>
 	<footer>
+		<!-- vanwege styling doeleinden classen rechterkolom + linkerkolom -->
 		<!-- footer vlak 1 -->
 		<article class="linkerkolom">
 			<h1><img src="./images/pattalogowhite.png" alt="logo of patta"></h1>
@@ -90,8 +100,8 @@
 		<!-- footer vlak 2 -->
 		<article class="rechterkolom">
 			<h3>Subscribe to our newsletter</h3>
-			<form action="">
-				<label for="email"></label>
+			<form action="/action_page.php">
+				<label for="email">E-mail address:</label>
 				<input type="email" name="email" placeholder="E-mail address">
 				<input type="submit" value="subscribe">
 			</form>
@@ -99,9 +109,9 @@
 			<a href="">PRIVACY</a>
 			<a href="">PATTA FOUNDATION</a>
 			<a href="">PATTA RUNNING TEAM</a>
-			<div><a href=""><img src="images/instagram.png" alt="instagram"></a>
-				<a href=""><img src="images/facebook.png" alt="facebook"></a>
-				<a href=""><img src="images/twitter.png" alt="twitter"></a></div>
+			<div><a href=""><img src="images/instagram.png" alt="instagram logo"></a>
+				<a href=""><img src="images/facebook.png" alt="facebook logo"></a>
+				<a href=""><img src="images/twitter.png" alt="twitter logo"></a></div>
 		</article>
 	</footer>
 	<!-- JAVASCRIPT -->
