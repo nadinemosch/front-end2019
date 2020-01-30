@@ -16,12 +16,12 @@ body {
 /*** opmaak header ***/
 header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .topnav {
-	width: 5rem;
+	width: 5em;
 	margin: auto;
 }
 
@@ -93,7 +93,6 @@ span::after {
 .navigation {
 	transform: translateX(-100%);
 	background: #FFFFFF;
-	margin-top: 1rem;
 	border-left: white solid;
 	width: 100%;
 	transition: .3s ease-in-out;
@@ -126,16 +125,16 @@ a:hover {
 
 /* slider menu */
 .slider {
-	width: 100%;
 	overflow: auto;
 	white-space: nowrap;
+	margin: auto;
 
 }
 
 .slider li {
 	display: list-item;
 	display: inline-block;
-	padding: 0 1em;
+	margin: 0 1em;
 }
 
 .slider a {
@@ -151,10 +150,6 @@ a:hover {
 /*** opmaak main ***/
 main {
 	font-family: "HelveticaNeue";
-}
-
-main article {
-	padding: 32px 24px;
 }
 
 figure img {
@@ -173,18 +168,6 @@ main h1 {
 h2 {
 	font-size: 20px;
 	margin: 0.5em 0em;
-}
-
-section p:last-of-type {
-	margin: 10px 0px;
-	font-size: 12px;
-	color: #969696;
-}
-
-section > h2 {
-	font-size: 32px;
-	padding-bottom: 1em;
-	border-bottom: solid 4px;
 }
 
 button {
@@ -210,7 +193,8 @@ footer {
 	color: #FFFFFF;
 }
 
-h3 {
+legend {
+	margin: 0 0 0.5em 0;
 	font-size: 24px;
 }
 
@@ -233,36 +217,40 @@ p + a {
 }
 
 /* formulier footer */
+fieldset {
+	border: 0px;
+	display: flex;
+}
+
 input {
-	color: lightgray;
-}
-
-input:not([type=submit]) {
-	width: 80%;
-	padding: 1px 1px 10px;
-	margin-top: 2em;
-	background-color: black;
-	border-style: solid;
-	border-width: 0px 0px 1px 0px;
-	border-color: #383838;
-}
-
-input:not([type=email]) {
-	background-color: #000000;
-	color: lightgray;
-	padding: 0.5em;
-	margin-top: 1em;
-	border: solid 0.5px #383838;
-	border-radius: 1em;
+	border-radius: 0.5em;
+	margin: 0.5em 0;
 	text-transform: uppercase;
 }
 
-input:not([type=email]):hover {
-	cursor: pointer;
-	background: lightgray;
+input:not([type=submit]):focus {
+	width: 22em;
+	background-color: #FFFFFF;
 	color: #000000;
+	transition: width .35s ease-in;
 }
 
+input:not([type=submit]) {
+	width: 20em;
+	padding: 1px 1px 10px 1px;
+	margin-top: 1em;
+	background-color: #000000;
+	border: 0px;
+}
+
+input[type=submit] {
+	background: #000000;
+	color: #FFFFFF;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	border: solid 0.5px #FFFFFF;
+	border-radius: 0.5em;
+}
 
 /* images footer */
 div img {
@@ -284,15 +272,20 @@ h1 > img {
 }
 
 @media screen and (min-width: 48em) {
-	body {
-		width: 100%;
-	}
 
 	/*** header desktop versie ***/
-	nav.slider {
-		margin: 0 10em;
+	nav. slider {
+		max-width: 100%;
 	}
-	
+
+	nav.slider ul {
+		margin: auto;
+	}
+
+	nav.slider li {
+		padding: 0 2.5em;
+	}
+
 	/*** main desktop versie ***/
 
 	.linkerkant {
@@ -305,17 +298,24 @@ h1 > img {
 		float: right;
 	}
 
+	figure > img {
+		max-width: 30em;
+	}
+
 	/*** footer desktop versie ***/
 	footer {
-		display: flex;
+		background: linear-gradient(#000000, #232323, #343434);
+		display: inline-flex;
 		flex-direction: row;
 	}
 
 	.linkerkolom {
+		padding: 0 1em;
 		width: 50%;
 	}
 
 	.rechterkolom {
+		padding: 0 1em;
 		width: 50%;
 	}
 
