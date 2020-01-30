@@ -88,7 +88,7 @@
 		</div>
 	</main>
 	<footer>
-		<!-- vanwege styling doeleinden classes rechterkolom + linkerkolom -->
+		<!-- vanwege styling doeleinden classen rechterkolom + linkerkolom -->
 		<!-- footer vlak 1 -->
 		<article class="linkerkolom">
 			<h1><img src="./images/pattalogowhite.png" alt="logo of patta"></h1>
@@ -99,11 +99,15 @@
 		</article>
 		<!-- footer vlak 2 -->
 		<article class="rechterkolom">
-			<h3>Subscribe to our newsletter</h3>
 			<form action="/action_page.php">
-				<label for="email">E-mail address:</label>
-				<input type="email" name="email" placeholder="E-mail address">
-				<input type="submit" value="subscribe">
+				<fieldset>
+					<legend>Subscribe to our newsletter</legend>
+					<label for="name">Name: </label>
+					<input type="text" name="name" placeholder="Full name">
+					<label for="email">E-mail address:</label>
+					<input type="email" name="email" placeholder="E-mail address">
+					<input type="submit" value="subscribe">
+				</fieldset>
 			</form>
 			<a href="">STORES</a>
 			<a href="">PRIVACY</a>
