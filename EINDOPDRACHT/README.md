@@ -5,6 +5,9 @@ waardoor de <main> direct onder de <header> zichtbaar is op de pagina. Ik heb me
 een - waarde zitten klooien maar het is me niet gelukt. Ik laat het voor nu hierbij, maar als je tijd hebt wil ik wel graag 
 weten hoe ik dit had kunnen doen.
 
+Hier de link naar de preview: https://nadinemosch.github.io/front-end2019/EINDOPDRACHT/ 
+
+
 Groetjes,
 
 Nadine :)
