@@ -11,3 +11,5 @@ Hier de link naar de preview: https://nadinemosch.github.io/front-end2019/EINDOP
 Groetjes,
 
 Nadine :)
+
+Ik zie dat de live preview van de detail pagine niet goed op de live preview te zien is op de een of andere manier.. Als ik dit bestand vanaf mijn laptop in Chrome open dan ziet het er heel anders uit. Dus misschien beter om zelf die code te kopieren en plakken
